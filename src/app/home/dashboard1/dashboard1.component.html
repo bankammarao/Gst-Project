@@ -1,0 +1,1183 @@
+<div class="container mt-5">
+
+        <!-- <nav class="navbar navbar-dark navbar-expand-sm bg-success mb-5">
+    
+    
+            <ul id="myTabs" class="nav nav-pills navbar-nav" role="tablist" data-tabs="tabs">
+                <li class="nav-item">
+                    <a href="#B2B" class="nav-link" data-toggle="tab">B2B</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#B2ba" class="nav-link" data-toggle="tab">B2BA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#B2cl" class="nav-link" data-toggle="tab">B2CL</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#B2cla" class="nav-link" data-toggle="tab">B2CLA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#B2cs" class="nav-link" data-toggle="tab">B2CS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#B2csa" class="nav-link" data-toggle="tab">B2CSA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Nil" class="nav-link" data-toggle="tab">NIL</a>
+                </li>
+            </ul>
+    
+    
+        </nav> -->
+    
+    
+        <form [formGroup]="gstinvoiceform">
+    
+            <div class="tab-content">
+    
+                <!-- b2b start -->
+    <div *ngIf="departmentid==1">
+                <div role="tabpanel" class="tab-pane fade show active" >
+                    <div class="tile">
+                        <h2 class="mb-5">b2b</h2>
+    
+                        <div class="row">
+    
+                            <div class="col-md-3">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+    
+                                    <input type="text" class="form-control" id="firstname"
+                                        placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+    
+                                    <span style="color:red"
+                                        *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+    
+                                        <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+    
+                                            GSTIN of the Tax Payer required
+    
+                                        </span>
+    
+                                    </span>
+    
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-3">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">return period</label>
+    
+                                    <input type="number" class="form-control" id="lastname"
+                                        placeholder="Enter return period " formControlName="ret_period">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-3">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+    
+                                    <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                        formControlName="gt">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-3">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">Gross Turnover</label>
+    
+                                    <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                        formControlName="cur_gt">
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <br>
+    
+    
+    
+                        <div class="row">
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">Counter party GSTIN</label>
+    
+                                    <input type="text" class="form-control" id="lastname"
+                                        placeholder="Enter Counter party GSTIN" formControlName="ctin">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">invoice number</label>
+    
+                                    <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                        formControlName="inum">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">Invoice date</label>
+    
+                                    <input type="date" class="form-control" id="lastname" placeholder="Enter Invoice date"
+                                        formControlName="idt">
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+    
+    
+                        <div class="row">
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">value</label>
+    
+                                    <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                        formControlName="val">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Place of Supply</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="pos">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Reverse Charge</label>
+    
+                                    <input type="text" class="form-control" id="firstname"
+                                        placeholder="Enter Reverse Charge" formControlName="rchrg">
+    
+    
+                                    <span style="color:red"
+                                        *ngIf="gstinvoiceform.get('rchrg').touched && gstinvoiceform.get('rchrg').invalid">
+    
+                                        <span *ngIf="gstinvoiceform.get('rchrg').errors.required">
+    
+                                            Name of the Reverse Charge required
+    
+                                        </span>
+    
+                                        <span *ngIf="gstinvoiceform.get('rchrg').errors.pattern">
+    
+                                            Only Two Character is allowed
+    
+                                        </span>
+    
+    
+                                    </span>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+    
+                        <div class="row">
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Ecom Operator Gstin</label>
+    
+                                    <input type="text" class="form-control" id="firstname"
+                                        placeholder="Enter Ecom Operator Gstin" formControlName="etin">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Invoice type</label>
+    
+                                    <input type="text" class="form-control" id="firstname" placeholder="Enter Invoice type"
+                                        formControlName="inv_typ">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Differential percentage</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Differential percentage" formControlName="diff_percent">
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <br>
+                        <h2>Item Details</h2>
+    
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Serial no</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Serial Number" formControlName="num">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Rate of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="rt">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Taxable value </label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="txval">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="iamt">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="csamt">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                        </div>
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+    
+                    <p class="hide">hide</p>
+                </div>
+            </div>
+    
+    
+                <!-- b2b end -->
+     
+    
+                <!-- b2ba start -->
+                <div *ngIf="departmentid==2">
+                <div role="tabpanel" class="tab-pane fade show active" >
+    
+                    <div class="tile" >
+                        <h2 class="mb-5" >b2ba</h2>
+    
+                        <div class="row">
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Place of Supply</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="posb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">invoice number</label>
+    
+                                    <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                        formControlName="inumb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Original Supplier Invoice Date</label>
+    
+                                    <input type="date" class="form-control" id="firstname"
+                                        placeholder="Enter Original Supplier Invoice Date" formControlName="oidt">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Original Supplier Invoice Number</label>
+    
+                                    <input type="text" class="form-control" id="firstname"
+                                        placeholder="Enter Original Supplier Invoice Number" formControlName="oinum">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">value</label>
+    
+                                    <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                        formControlName="valb2ba">
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <br>
+    
+    
+                        <h2>Item Details</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Serial no</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Serial Number" formControlName="numb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Rate of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="rtb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Taxable value </label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="txvalb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="iamtb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">CGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter CGST Amount as per invoice" formControlName="camtb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">SGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter SGST Amount as per invoice" formControlName="samtb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="csamtb2ba">
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+                    <p class="hide">hide</p>
+                </div>
+    </div>
+         
+                <!-- b2ba end -->
+    
+                <!-- b2cl start -->
+    
+                <div *ngIf="departmentid==3">
+           <div role="tabpanel" class="tab-pane fade show active" id="B2cl">
+    
+                    <div class="tile">
+                        <h2 class="mb-5">B2CL-Add Invoice</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Place of Supply</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="posb2cl">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">invoice number</label>
+    
+                                    <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                        formControlName="inumb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">Invoice date</label>
+    
+                                    <input type="date" class="form-control" id="lastname" placeholder="Enter Invoice date"
+                                        formControlName="idtb2cl">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">value</label>
+    
+                                    <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                        formControlName="valb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                        </div>
+                        <br>
+                        <h2>Item Details</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Serial no</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Serial Number" formControlName="numb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Rate of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="rtb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Taxable value </label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="txvalb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="iamtb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="csamtb2cl">
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+                    <p class="hide">hide</p>
+                </div>
+            </div>
+                <!-- b2cl start -->
+    
+    
+                <!-- b2cla start -->
+                <div *ngIf="departmentid==4">
+                 <div role="tabpanel" class="tab-pane fade show active" id="B2cla">
+    
+    
+                    <div class="tile">
+                        <h2 class="mb-5">B2CLA-Add Invoice</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Original Supplier Invoice Number</label>
+    
+                                    <input type="text" class="form-control" id="firstname"
+                                        placeholder="Enter Original Supplier Invoice Number" formControlName="oinumb2cla">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Original Supplier Invoice Date</label>
+    
+                                    <input type="date" class="form-control" id="firstname"
+                                        placeholder="Enter Original Supplier Invoice Date" formControlName="oidtab2cla">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">invoice number</label>
+    
+                                    <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                        formControlName="inumb2cla">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">Invoice date</label>
+    
+                                    <input type="date" class="form-control" id="lastname" placeholder="Enter Invoice date"
+                                        formControlName="idtb2cla">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group">
+    
+                                    <label for="lastname" class="control-label">value</label>
+    
+                                    <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                        formControlName="valb2cla">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                        </div>
+                        <br>
+                        <h2>Item Details</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Serial no</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Serial Number" formControlName="numb2cla">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Rate of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="rtb2cla">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Taxable value </label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="txvalb2cla">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="iamtb2cla">
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+                    <p class="hide">hide</p>
+    
+                </div> 
+    
+    </div>
+                <!-- b2cla end -->
+    
+    
+                <!-- b2cs start -->
+                <div *ngIf="departmentid==5">
+              <div role="tabpanel" class="tab-pane fade show active" id="B2cs">
+    
+                    <div class="tile">
+                        <h2 class="mb-5">B2CS-Add Invoice</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Supply Type</label>
+    
+                                    <input type="text" class="form-control" id="firstname" placeholder="Enter Supply Type"
+                                        formControlName="sply_tyb2cs">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Rate of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="rtb2cs">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Place of Supply</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="posb2cs">
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <br>
+                        <h2>Item Details</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Taxable value </label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="txvalb2cs">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="iamtb2cs">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="csamtb2cs">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Total Non GST outward supplies</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Total Non GST outward supplies" formControlName="ngsup_amt">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                        </div>
+    
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+                    <p class="hide">hide</p>
+                </div>
+    </div>
+    
+                <!-- b2cs start -->
+    
+                <!-- B2csa start -->
+                <div *ngIf="departmentid==6">
+                <div role="tabpanel" class="tab-pane fade show active" id="B2csa">
+    
+                    <div class="tile">
+                        <h2 class="mb-5">B2CSA-Add Invoice</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Original Month of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Original Month of Invoice" formControlName="omonb2csa">
+    
+                                </div>
+                            </div>
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Type</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Original Month of Invoice" formControlName="typ">
+    
+                                </div>
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Supply Type</label>
+    
+                                    <input type="text" class="form-control" id="firstname" placeholder="Enter Supply Type"
+                                        formControlName="sply_tyb2csa">
+    
+                                </div>
+    
+                            </div>
+    
+    
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Place of Supply</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="posb2csa">
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <br>
+                        <h2>Item Details</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Rate of Invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="rtb2csa">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Taxable value </label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="txvalb2csa">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="iamtb2csa">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">CGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter CGST Amount as per invoice" formControlName="camtb2csa">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">SGST Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter SGST Amount as per invoice" formControlName="samtb2csa">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+    
+                                    <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                        formControlName="csamtb2csa">
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+    
+                    <p class="hide">hide</p>
+    
+    
+                </div> 
+                </div>
+                <!--  B2csa end -->
+    
+    
+                <!-- nil start-->
+                <div *ngIf="departmentid==7">
+           <div role="tabpanel" class="tab-pane fade show active" id="Nil">
+    
+    
+                    <div class="tile">
+                        <h2 class="mb-5">Nill-Add invoice</h2>
+                        <div class="row">
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Supply Type</label>
+    
+                                    <input type="text" class="form-control" id="firstname" placeholder="Enter Supply Type"
+                                        formControlName="sply_tynill">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Total Exempted outward supplies</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Total Exempted outward supplies" formControlName="expt_amtnill">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Total Nil rated outward supplies</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Total Nil rated outward supplies" formControlName="nil_amtnill">
+    
+                                </div>
+    
+                            </div>
+                            <div class="col-md-4">
+    
+                                <div class="form-group form-group-sm">
+    
+                                    <label for="firstname" class="control-label">Total Non GST outward supplies</label>
+    
+                                    <input type="number" class="form-control" id="firstname"
+                                        placeholder="Enter Total Non GST outward supplies" formControlName="ngsup_amtnill">
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <button type="button" class="btn btn-success"
+                            (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+    
+                        <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                        <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+    
+                    </div>
+    
+                    <p class="hide">hide</p>
+    
+                </div>
+    </div>
+    
+                <!-- nil end-->
+            </div>
+        </form>
+    </div>

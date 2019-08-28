@@ -1,0 +1,394 @@
+<div class="container mt-5">
+    <!-- expa starts -->
+    <form [formGroup]="gstinvoiceform">
+        <div>
+            <div role="tabpanel" class="tab-pane fade show active">
+
+                <div class="tile">
+                    <h2 class="mb-5">Expa</h2>
+                    <div class="row">
+
+                        <div class="col-md-3">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+
+                                <input type="text" class="form-control" id="firstname"
+                                    placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                                        GSTIN of the Tax Payer required
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Return period</label>
+
+                                <input type="number" class="form-control" id="lastname"
+                                    placeholder="Enter return period " formControlName="ret_period">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+
+                                        Return period is required
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="gt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gt').errors.required">
+
+                                        Gross Turnover in Financial year is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turnover</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="cur_gt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+
+                                        Gross Turnover is required
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Export Type : With / Without payment of
+                                    GST</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter exp_typ"
+                                    formControlName="exp_typexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('exp_typexpa').touched && gstinvoiceform.get('exp_typexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('exp_typexpa').errors.required">
+
+                                        Export Type : With / Without payment of GSTis required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Invoice number</label>
+
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                    formControlName="inumexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('inumexpa').touched && gstinvoiceform.get('inumexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('inumexpa').errors.required">
+
+                                        Invoice number is Mandatory
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Supplier Invoice Date</label>
+
+                                <input type="date" class="form-control" id="firstname"
+                                    placeholder="Enter Original Supplier Invoice Date" formControlName="idtexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('idtexpa').touched && gstinvoiceform.get('idtexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('idtexpa').errors.required">
+
+                                        Supplier Invoice Date is Mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Value</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="valexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('valexpa').touched && gstinvoiceform.get('valexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('valexpa').errors.required">
+
+                                        Value is Mandatory
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Shipping Bill Port Code</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="sbpcodeexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('sbpcodeexpa').touched && gstinvoiceform.get('sbpcodeexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('sbpcodeexpa').errors.required">
+
+                                        Shipping Bill Port Code is Mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label"> Shipping Bill No. or Bill of Export No
+                                </label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="sbnumexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('sbnumexpa').touched && gstinvoiceform.get('sbnumexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('sbnumexpa').errors.required">
+
+                                        Shipping Bill No.or Bill of Export No is Mandatory
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Shipping Bill Date. or Bill of Export
+                                    Date</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="sbdtexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('sbdtexpa').touched && gstinvoiceform.get('sbdtexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('sbdtexpa').errors.required">
+
+                                        Shipping Bill Date. or Bill of Export Date is Mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <br>
+
+
+                    <h2>Item Details</h2>
+                    <div class="row">
+
+
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Rate of Invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="rtexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('rtexpa').touched && gstinvoiceform.get('rtexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('rtexpa').errors.required">
+
+                                        Rate of Invoice Is Mandatory
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Taxable value </label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="txvalexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('txvalexpa').touched && gstinvoiceform.get('txvalexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('txvalexpa').errors.required">
+                                        Taxable value Is Mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="iamtexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('iamtexpa').touched && gstinvoiceform.get('iamtexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('iamtexpa').errors.required">
+                                        IGST Amount as per invoice Is Mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="csamtexpa">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('csamtexpa').touched && gstinvoiceform.get('csamtexpa').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('csamtexpa').errors.required">
+                                            Cess Amount as per invoice Is Mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-success"
+                    (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+                <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                 <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- expa ends -->
+</div>

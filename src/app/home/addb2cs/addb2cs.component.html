@@ -1,0 +1,300 @@
+<div class="container mt-5">
+    <!-- b2cs start -->
+    <form [formGroup]="gstinvoiceform">
+    <div>
+       <div role="tabpanel" class="tab-pane fade show active" id="B2cs">
+ 
+           <div class="tile">
+               <h2 class="mb-5">B2CS-Add Invoice</h2>
+ 
+               <div class="row">
+ 
+                   <div class="col-md-3">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+ 
+                           <input type="text" class="form-control" id="firstname"
+                               placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+ 
+                           <span style="color:red"
+                               *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+ 
+                                   GSTIN of the Tax Payer required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+ 
+                   <div class="col-md-3">
+ 
+                       <div class="form-group">
+ 
+                           <label for="lastname" class="control-label">return period</label>
+ 
+                           <input type="number" class="form-control" id="lastname"
+                               placeholder="Enter return period " formControlName="ret_period">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+ 
+                                     return period  is  required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+ 
+                   <div class="col-md-3">
+ 
+                       <div class="form-group">
+ 
+                           <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+ 
+                           <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                               formControlName="gt">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('gt').errors.required">
+ 
+                                     Gross Turnover in Financial year is  required
+ 
+                               </span>
+ 
+                           </span>
+ 
+                       </div>
+ 
+                   </div>
+ 
+ 
+                   <div class="col-md-3">
+ 
+                       <div class="form-group">
+ 
+                           <label for="lastname" class="control-label">Gross Turnover</label>
+ 
+                           <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                               formControlName="cur_gt">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+ 
+                                     Gross Turnover is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+               </div>
+               <br>
+               <div class="row">
+ 
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">Supply Type</label>
+ 
+                           <input type="text" class="form-control" id="firstname"
+                               placeholder="Enter Supply Type" formControlName="sply_tyb2cs">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('sply_tyb2cs').touched && gstinvoiceform.get('sply_tyb2cs').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('sply_tyb2cs').errors.required">
+ 
+                                     Supply Type is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+                       </div>
+ 
+                   </div>
+ 
+ 
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">Rate of Invoice</label>
+ 
+                           <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                               formControlName="rtb2cs">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('rtb2cs').touched && gstinvoiceform.get('rtb2cs').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('rtb2cs').errors.required">
+ 
+                                     Rate of Invoice is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+                       </div>
+ 
+                   </div>
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">Place of Supply</label>
+ 
+                           <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                               formControlName="posb2cs">
+                              <span style="color:red"
+                               *ngIf="gstinvoiceform.get('posb2cs').touched && gstinvoiceform.get('posb2cs').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('posb2cs').errors.required">
+ 
+                                     Place of Supply is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+ 
+               </div>
+ 
+               <br>
+               <h2>Item Details</h2>
+               <div class="row">
+ 
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">Taxable value </label>
+ 
+                           <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                               formControlName="txvalb2cs">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('txvalb2cs').touched && gstinvoiceform.get('txvalb2cs').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('txvalb2cs').errors.required">
+ 
+                                     Taxable value is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+                       </div>
+ 
+                   </div>
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+ 
+                           <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                               formControlName="iamtb2cs">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('iamtb2cs').touched && gstinvoiceform.get('iamtb2cs').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('iamtb2cs').errors.required">
+ 
+                                     IGST Amount as per invoice is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+ 
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+ 
+                           <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                               formControlName="csamtb2cs">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('csamtb2cs').touched && gstinvoiceform.get('csamtb2cs').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('csamtb2cs').errors.required">
+ 
+                                     Cess Amount as per invoice is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+                   <div class="col-md-4">
+ 
+                       <div class="form-group form-group-sm">
+ 
+                           <label for="firstname" class="control-label">Total Non GST outward supplies</label>
+ 
+                           <input type="number" class="form-control" id="firstname"
+                               placeholder="Enter Total Non GST outward supplies" formControlName="ngsup_amt">
+                               <span style="color:red"
+                               *ngIf="gstinvoiceform.get('ngsup_amt').touched && gstinvoiceform.get('ngsup_amt').invalid">
+ 
+                               <span *ngIf="gstinvoiceform.get('ngsup_amt').errors.required">
+ 
+                                     Total Non GST outward supplies is required
+ 
+                               </span>
+ 
+                           </span>
+ 
+ 
+                       </div>
+ 
+                   </div>
+ 
+ 
+               </div>
+ 
+               <button type="button" class="btn btn-success"
+                   (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Save</button>
+ 
+               <button type="button" class="btn btn-danger ml-4"
+                   (click)="gstinvoiceform.reset()">Cancel</button>
+               <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+ 
+           </div>
+          
+       </div>
+  
+   </div>
+ 
+ </form>
+   <!-- b2cs start -->
+ </div>
+ 

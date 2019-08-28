@@ -1,0 +1,378 @@
+<div class="container mt-5">
+    <!-- b2ba start -->
+    <form [formGroup]="gstinvoiceform">
+        <!-- b2ba start -->
+        <div>
+            <div role="tabpanel" class="tab-pane fade show active">
+
+                <div class="tile">
+                    <h2 class="mb-5"> B2BA-ADD INVOICE</h2>
+                    <div class="row">
+
+                        <div class="col-md-3">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+
+                                <input type="text" class="form-control" id="firstname"
+                                    placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+                                        GSTIN of the Tax Payer required
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">return period</label>
+
+                                <input type="number" class="form-control" id="lastname"
+                                    placeholder="Enter return period " formControlName="ret_period">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+                                        return period is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="gt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gt').errors.required">
+                                        Gross Turnover in Financial year is mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turnover</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="cur_gt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+                                        Gross Turnover is mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Place of Supply</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="posb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('posb2ba').touched && gstinvoiceform.get('posb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('posb2ba').errors.required">
+                                        Place of Supply is mandatory
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">invoice number</label>
+
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                    formControlName="inumb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('inumb2ba').touched && gstinvoiceform.get('inumb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('inumb2ba').errors.required">
+                                        invoice number is mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Original Supplier Invoice Date</label>
+
+                                <input type="date" class="form-control" id="firstname"
+                                    placeholder="Enter Original Supplier Invoice Date" formControlName="oidt">
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Original Supplier Invoice Number</label>
+
+                                <input type="text" class="form-control" id="firstname"
+                                    placeholder="Enter Original Supplier Invoice Number" formControlName="oinum">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('oinum').touched && gstinvoiceform.get('oinum').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('oinum').errors.required">
+                                        Original Supplier Invoice Number is mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">value</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="valb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('valb2ba').touched && gstinvoiceform.get('valb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('valb2ba').errors.required">
+                                        value is mandatory
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <h2>Item Details</h2>
+                    <div class="row">
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Serial no</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter Serial Number" formControlName="numb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('numb2ba').touched && gstinvoiceform.get('numb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('numb2ba').errors.required">
+                                        Serial number is mandatory
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Rate of Invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="rtb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('rtb2ba').touched && gstinvoiceform.get('rtb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('rtb2ba').errors.required">
+                                        Rate of Invoice is mandatory
+                                    </span>
+
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Taxable value </label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="txvalb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('txvalb2ba').touched && gstinvoiceform.get('txvalb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('txvalb2ba').errors.required">
+                                        Taxable value is mandatory
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="iamtb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('iamtb2ba').touched && gstinvoiceform.get('iamtb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('iamtb2ba').errors.required">
+                                        IGST Amount as per invoice is mandatory
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">CGST Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter CGST Amount as per invoice" formControlName="camtb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('camtb2ba').touched && gstinvoiceform.get('camtb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('camtb2ba').errors.required">
+                                        CGST Amount as per invoice is mandatory
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">SGST Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter SGST Amount as per invoice" formControlName="samtb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('samtb2ba').touched && gstinvoiceform.get('samtb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('samtb2ba').errors.required">
+                                        SGST Amount as per invoice is mandatory
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="csamtb2ba">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('csamtb2ba').touched && gstinvoiceform.get('csamtb2ba').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('csamtb2ba').errors.required">
+                                        Cess Amount as per invoice is mandatory
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-success"
+                        (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Save</button>
+
+                    <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                    <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- b2ba end -->
+    </form>
+</div>

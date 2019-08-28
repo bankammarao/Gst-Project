@@ -1,0 +1,102 @@
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i>State</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <button type="button" style="margin-bottom:8px" class="btn btn-info float-right" data-toggle="modal"
+      data-backdrop="static" data-target="#myModal1"  (click)="addbutton()" (click)="stateform.reset()">Add</button>
+  </div>
+</div>
+<div class="tile">
+
+  <table class="table">
+    <thead>
+      <tr style="font-size:15px">
+        <th>State Name</th>
+        <th>Email</th>
+        <th>Updated Date</th>
+        <th>Status</th>
+       <th>Edit</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let emp of stateList | filter:term | paginate: { itemsPerPage: 5, currentPage: p };">
+        <td>{{emp.stateName}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.updatedDate}}</td>
+        <td *ngIf="emp.status == 'Active'"><span [ngClass]="{'status1': emp.status=='Inactive', 'status2':emp.status=='Active' }" (click)="deletestate(emp)">Active</span></td>
+        <td *ngIf="emp.status == 'Inactive'"><span [ngClass]="{'status1': emp.status=='Inactive', 'status2':emp.status=='Active' }" (click)="deletestate(emp)">InActive</span></td> 
+      
+        <td>
+              <span>
+                  <span (click)="editstate(emp.id)" data-toggle="modal" data-target="#myModal1"
+                    class="glyphicon glyphicon-pencil">
+                    <i class="fa fa-edit" style="font-size:24px;color:rgb(49, 17, 233)"></i>
+                  </span>
+              </span>
+            </td>
+          <td>
+          <!-- <span>
+            <span (click)="deleteSpecialEvent(data.id)" value="delete">
+              <i class="fa fa-trash" style="font-size:24px;color:red"></i>
+            </span>
+          </span> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<pagination-controls (pageChange)="p = $event" class="pull-right"></pagination-controls>
+
+
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+      <form [formGroup]="stateform">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add State Name</h4>
+              <button type="button" class="close" data-dismiss="modal" (click)="stateform.reset()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-12">
+                <input type="text" placeholder="State Name" formControlName="stateName" name="stateName"
+                  class="form-control">
+                <span class="text text-danger"
+                  *ngIf="stateform.controls['stateName'].invalid && stateform.controls['stateName'].touched">State 
+                  Name Required</span>
+              </div><br>
+              <div class="col-md-12">
+                <input type="text" placeholder="Enter Email" formControlName="email" name="email"
+                  class="form-control">
+                <span class="text text-danger"
+                  *ngIf="stateform.controls['email'].invalid && stateform.controls['email'].touched">Email
+                  Name Required</span>
+              </div>
+            </div>
+            <div class="modal-footer" *ngIf="isCreated">
+              <button type="submit"   class="btn btn-primary float-right " 
+               id="register"  (click)="savestatedata(stateform.value)" 
+               data-dismiss="modal" [disabled]="stateform.invalid">Submit</button>
+            </div>
+            <div class="modal-footer" *ngIf="isCreatedby">
+              <button type="submit"   class="btn btn-primary float-right " 
+               id="register"  (click)="updatestate(stateform.value)" 
+               data-dismiss="modal"  [disabled]="stateform.invalid">Update</button>
+            </div>
+          </div>
+        </form>
+  </div>
+</div>
+
+

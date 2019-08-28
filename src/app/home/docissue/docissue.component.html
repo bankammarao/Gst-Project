@@ -1,0 +1,56 @@
+
+<div class="app-title mt-4" style="margin-left: -100px;
+margin-right: 10px;">
+    <div>
+      <h1><i class="fa fa-th-list"></i>Doc-Issue-Invoice</h1>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group" style="margin-left: -100px;
+      margin-right: 155px;">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <button type="button" style="margin-bottom:8px" class="btn btn-info float-right"  (click)="adddocissue()" >Add Invoice</button>
+    </div>
+  </div>
+  <div class="tile" style="margin-left: -97px;">
+ 
+    <table class="table">
+      <thead>
+        <tr style="font-size:15px">
+          <th>Serial Number</th>
+          <th>From Serial Number</th>
+          <th>To Serial Number</th>
+          <th>Total Number</th>
+          <th>Cancelled</th>
+          <th>Net Issued</th>
+         
+      </thead>
+      <tbody>
+ 
+        <tr *ngFor="let gst of array| filter:term | paginate: { itemsPerPage: 5, currentPage:b2bpage }; let i=index">
+ 
+          <td>{{gst.doc_num}}</td>
+          <td>{{gst.docs[0].from}}</td>
+          <td>{{gst.docs[0].to}}</td>
+          <td>{{gst.docs[0].totnum}}</td>
+          <td>{{gst.docs[0].cancel}}</td>
+          <td>{{gst.docs[0].net_issue}}</td>
+ 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-success" (click)="back()">Back</button>
+    </div>
+    <div class="col-md-6">
+    <pagination-controls class="pull-right" (pageChange)="b2bpage = $event"></pagination-controls> 
+    </div>
+    </div>

@@ -1,0 +1,104 @@
+<div class="app-title mt-4" style="margin-left: -100px;
+margin-right: 10px;">
+
+  <div>
+
+    <h1><i class="fa fa-th-list"></i>HSN-invoice</h1>
+
+  </div>
+
+  <ul class="app-breadcrumb breadcrumb">
+
+  </ul>
+
+</div>
+<div class="row">
+    <div class="col-md-3">
+      <div class="form-group" style="margin-left: -100px;
+      margin-right: 155px;">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <button type="button" style="margin-bottom:8px" class="btn btn-info float-right"  (click)="addhsn()" >Add Invoice</button>
+    </div>
+  </div>
+
+<div class="tile" style="margin-left: -97px;">
+
+
+
+  <table class="table">
+
+    <thead>
+
+      <tr style="font-size:15px">
+
+        <th>num</th>
+
+        <th>HSN of Goods or Services as per Invoice line items</th>
+
+        <th>Description of goods sold</th>
+
+        <th>UQC of goods sold</th>
+
+        <th>Quantity of goods sold</th>
+
+        <th>Total Value</th>
+
+        <th>Taxable value of Goods</th>
+
+        <th>IGST Amount as per invoice</th>
+
+        <!-- <th>camt</th>
+
+<th>samt</th> -->
+
+        <th>Cess Amount as per invoice</th>
+
+
+
+
+
+      </tr>
+
+    <tbody>
+
+      <tr *ngFor="let d of hsnList| filter:term | paginate: { itemsPerPage: 5, currentPage:b2bpage }; let i=index">
+
+
+        <td>{{d.num}}</td>
+
+        <td>{{d.hsn_sc}}</td>
+
+        <td>{{d.desc}}</td>
+
+        <td>{{d.uqc}}</td>
+
+        <td>{{d.qty}}</td>
+
+        <td>{{d.val}}</td>
+
+        <td>{{d.txval}}</td>
+
+        <td>{{d.iamt}}</td>
+
+        <!-- <td>{{d.camt}}</td>
+
+<td>{{d.samt}}</td> -->
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success" (click)="back()">Back</button>
+  </div>
+  <div class="col-md-6">
+  <pagination-controls class="pull-right" (pageChange)="b2bpage = $event"></pagination-controls> 
+  </div>
+  </div>

@@ -1,0 +1,507 @@
+<!-- <p>
+  gstr3b works!
+</p> -->
+<!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">etin</label>
+                <input type="text" class="form-control" id="firstname" formControlName="etin" >
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">inv_typ</label>
+                <input type="text" class="form-control" id="firstname"  formControlName="inv_typ">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">diff_percent</label>
+                <input type="number" class="form-control" id="firstname"  formControlName="diff_percent">
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">num</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="num" >
+                </div>
+            </div>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+  </div> -->
+
+
+  <form [formGroup]="gstr3bform">
+      <div class="tile">
+        
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group form-group-sm">
+              <label for="firstname" class="control-label">gstin</label>
+              <input type="text" class="form-control" id="firstname" formControlName="gstin">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="lastname" class="control-label">ret_period</label>
+              <input type="number" class="form-control" id="lastname" formControlName="ret_period">
+            </div>
+          </div>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nature of supplies</th>
+              <th>Total taxable value</th>
+              <th>Integrated tax</th>
+              <th>Central tax</th>
+              <th>State/UT Tax</th>
+              <th>Cess</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">(a).Outward taxable supplies (other than zero rated, nil rated and exempted)
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">txval</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="txval">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">camt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="camt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">(b).Outward taxable supplies (zero rated )
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">txval</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="txval">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td colspan="1"></td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">(c).Other outward supplies (Nil rated, exempted)
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">txval</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="txval">
+                </div>
+              </td>
+              <td colspan="4"></td>
+      
+            </tr>
+            <tr>
+              <th scope="row">(d).Inward supplies (liable to reverse charge)
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">txval</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="txval">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">camt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="camt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+      
+            </tr>
+            <tr>
+              <th scope="row">(e).Non-GST outward supplies
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">txval</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="txval">
+                </div>
+              </td>
+              <td colspan="4"></td>
+      
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" (click)="savegst3bobj(gstr3bform.value)" class="btn btn-primary pull-right">Add</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-success pull-right">Cancel</button>
+        <br><br>
+      </div>
+      
+      
+      
+      <div class="tile">
+        <h4>Eligible ITC</h4>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nature of supplies</th>
+              <th>Integrated tax</th>
+              <th>Central tax</th>
+              <th>State/UT Tax</th>
+              <th>Cess</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">(A)ITC Available (whether full or part)
+      
+              </th>
+            </tr>
+            <tr>
+              <th scope="row">(1).Import of Goods
+              </th>
+      
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td colspan="2"></td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+      
+            </tr>
+            <tr>
+              <th scope="row">(2).Import of Services
+              </th>
+      
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td colspan="2"></td>
+      
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">(3).Inward supplies liable to reverse charge(other than 1 & 2)
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">camt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="camt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+      
+      
+            </tr>
+            <tr>
+              <th scope="row">(4).Inward supplies from ISD
+              </th>
+      
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">camt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="camt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+      
+            </tr>
+            <tr>
+              <th scope="row">(5)All other ITC
+              </th>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">camt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="camt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+      
+      
+            </tr>
+         <tr>
+           <th scope="row">(B)ITC Reveresd
+      
+           </th>
+         </tr>
+      
+          <tr>
+            <th scope="row">(1)As per rule 42 & 43
+            </th>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">iamt</label>
+                <input type="number" class="form-control" id="lastname" formControlName="iamt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">camt</label>
+                <input type="number" class="form-control" id="lastname" formControlName="camt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">samt</label>
+                <input type="number" class="form-control" id="lastname" formControlName="samt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">csamt</label>
+                <input type="number" class="form-control" id="lastname" formControlName="csamt">
+              </div>
+            </td>
+          </tr>
+      <tr>
+          <th scope="row">(2)Others
+            </th>
+            <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">iamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">camt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="camt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">samt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="samt">
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <label for="lastname" class="control-label">csamt</label>
+                  <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                </div>
+              </td>
+              <tr>
+                <th scope="row">(C)Net ITC avilable (A) - (B)
+                </th>
+                <td>
+                    <div class="form-group">
+                      <label for="lastname" class="control-label">iamt</label>
+                      <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <label for="lastname" class="control-label">camt</label>
+                      <input type="number" class="form-control" id="lastname" formControlName="camt">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <label for="lastname" class="control-label">samt</label>
+                      <input type="number" class="form-control" id="lastname" formControlName="samt">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <label for="lastname" class="control-label">csamt</label>
+                      <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <th scope="row">(D)Ineligible ITC
+                </th>
+                
+                    <td>
+                        <div class="form-group">
+                          <label for="lastname" class="control-label">iamt</label>
+                          <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="lastname" class="control-label">camt</label>
+                          <input type="number" class="form-control" id="lastname" formControlName="camt">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="lastname" class="control-label">samt</label>
+                          <input type="number" class="form-control" id="lastname" formControlName="samt">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="lastname" class="control-label">csamt</label>
+                          <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                        </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">(E)Net ITC avilable (A) - (B)
+                        </th>
+                        <td>
+                            <div class="form-group">
+                              <label for="lastname" class="control-label">iamt</label>
+                              <input type="number" class="form-control" id="lastname" formControlName="iamt">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <label for="lastname" class="control-label">camt</label>
+                              <input type="number" class="form-control" id="lastname" formControlName="camt">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <label for="lastname" class="control-label">samt</label>
+                              <input type="number" class="form-control" id="lastname" formControlName="samt">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <label for="lastname" class="control-label">csamt</label>
+                              <input type="number" class="form-control" id="lastname" formControlName="csamt">
+                            </div>
+                          </td>
+                </tr>
+            
+      
+      </tbody>
+        </table>
+        <button type="button" (click)="savegst3bobj(gstr3bform.value)" class="btn btn-primary pull-right">Add</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-success pull-right">Cancel</button>
+        <br><br>
+      </div>
+      </form>

@@ -1,0 +1,91 @@
+<div class="app-title mt-4" style="margin-left: -100px;
+margin-right: 10px;">
+  <div>
+    <h1><i class="fa fa-th-list"></i> B2CSA-Invoice</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+  </ul>
+</div>
+<div class="row">
+    <div class="col-md-3">
+      <div class="form-group" style="margin-left: -100px;
+      margin-right: 155px;">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <button type="button" style="margin-bottom:8px" class="btn btn-info float-right"  (click)="addb2csa()" >Add Invoice</button>
+    </div>
+  </div>
+<div class="tile" style="margin-left: -97px;">
+
+  <table class="table">
+      <thead>
+          <tr style="font-size:15px">
+
+              <th>Original Month of Invoice</th>
+
+              <th>Supply Type</th>
+
+              <th>Differential percentage</th>
+
+              <th>Type
+              </th>
+
+              <th>Ecom Operator Gstin</th>
+
+              <th>Place of Supply</th>
+
+              <th>Rate</th>
+
+              <th>Taxable value of Goods or Service as per invoice</th>
+
+              <th>IGST Amount as per invoice</th>
+
+              <th>CGST Amount as per invoice</th>
+
+              <th>SGST Amount as per invoice</th>
+
+              <th>cess Amount as per invoice</th>
+
+          </tr>
+      <tbody>
+          <tr *ngFor="let d of getb2csadata| filter:term | paginate: { itemsPerPage: 5, currentPage:b2bpage }; let i=index">
+
+              <td>{{d.omon}}</td>
+
+              <td>{{d.sply_ty}}</td>
+
+              <td>{{d.diff_percent}}</td>
+
+              <td>{{d.typ}}</td>
+
+              <td>{{d.etin}}</td>
+
+              <td>{{d.pos}}</td>
+
+              <td>{{d.itms[0].rt}}</td>
+
+              <td>{{d.itms[0].txval}}</td>
+
+              <td>{{d.itms[0].iamt}}</td>
+
+              <td>{{d.itms[0].camt}}</td>
+
+              <td>{{d.itms[0].samt}}</td>
+
+              <td>{{d.itms[0].csamt}}</td>
+
+          </tr>
+      </tbody>
+  </table>
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success" (click)="back()">Back</button>
+  </div>
+  <div class="col-md-6">
+  <pagination-controls class="pull-right" (pageChange)="b2bpage = $event"></pagination-controls> 
+  </div>
+  </div>

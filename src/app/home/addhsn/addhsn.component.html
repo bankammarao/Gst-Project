@@ -1,0 +1,275 @@
+<div class="container mt-5">
+  <!-- hsn starts -->
+  <form [formGroup]="gstinvoiceform">
+    <div>
+
+      <div role="tabpanel" class="tab-pane fade show active" id="hsn">
+
+        <div class="tile">
+
+          <h2 class="mb-5">HSN-Add Invoice</h2>
+          <div class="row">
+
+            <div class="col-md-3">
+
+              <div class="form-group form-group-sm">
+
+                <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+
+                <input type="text" class="form-control" id="firstname" placeholder="Enter GSTIN of the Tax Payer"
+                  formControlName="gstin">
+
+                <span style="color:red"
+                  *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                    GSTIN of the Tax Payer required
+
+                  </span>
+
+                </span>
+
+
+              </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+              <div class="form-group">
+
+                <label for="lastname" class="control-label">Return period</label>
+
+                <input type="number" class="form-control" id="lastname" placeholder="Enter return period "
+                  formControlName="ret_period">
+                <span style="color:red"
+                  *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+
+                    Return period is required
+
+                  </span>
+
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+              <div class="form-group">
+
+                <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+
+                <input type="number" class="form-control" id="lastname" placeholder="Enter Number" formControlName="gt">
+                <span style="color:red" *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('gt').errors.required">
+
+                    Gross Turnover in Financial year is required
+
+                  </span>
+
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+              <div class="form-group">
+
+                <label for="lastname" class="control-label">Gross Turnover</label>
+
+                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                  formControlName="cur_gt">
+                <span style="color:red"
+                  *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+
+                    Gross Turnover is required
+
+                  </span>
+
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+          <br>
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label"> Num</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter Original Supplier Invoice Number" formControlName="numhsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('numhsn').touched && gstinvoiceform.get('numhsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('numhsn').errors.required">
+
+                    Number is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">HSN of Goods or Services as per Invoice line items</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter Original Supplier Invoice Number" formControlName="hsn_schsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('hsn_schsn').touched && gstinvoiceform.get('hsn_schsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('hsn_schsn').errors.required">
+
+                    HSN of Goods or Services as per Invoice line items is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">Description of goods sold</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter Original Supplier Invoice Number" formControlName="deschsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('deschsn').touched && gstinvoiceform.get('deschsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('deschsn').errors.required">
+
+                    Description of goods sold is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">UQC (Unit of Measure) of goods sold</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter Original Supplier Invoice Number" formControlName="uqchsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('uqchsn').touched && gstinvoiceform.get('uqchsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('uqchsn').errors.required">
+
+                    HUQC (Unit of Measure) of goods sold is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">Quantity of goods sold</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter Quantity of goods sold" formControlName="qtyhsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('qtyhsn').touched && gstinvoiceform.get('qtyhsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('qtyhsn').errors.required">
+
+                    Quantity of goods sold is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">val</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter value" formControlName="valhsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('valhsn').touched && gstinvoiceform.get('valhsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('valhsn').errors.required">
+
+                    Value is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">Taxable value of Goods or Service as per invoice</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter Taxable value of Goods" formControlName="txvalhsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('txvalhsn').touched && gstinvoiceform.get('txvalhsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('txvalhsn').errors.required">
+
+                    Taxable value of Goods or as per invoice is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter  IGST Amount as per invoice" formControlName="iamthsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('iamthsn').touched && gstinvoiceform.get('iamthsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('iamthsn').errors.required">
+
+                    IGST Amount as per invoice is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+                <input type="text" class="form-control" id="firstname"
+                  placeholder="Enter  Cess Amount as per invoice" formControlName="csamthsn">
+                  <span style="color:red"
+                  *ngIf="gstinvoiceform.get('csamthsn').touched && gstinvoiceform.get('csamthsn').invalid">
+
+                  <span *ngIf="gstinvoiceform.get('csamthsn').errors.required">
+
+                    Cess Amount as per invoice is required
+
+                  </span>
+
+                </span>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-success" (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+          <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+          <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<!--hsn ends-->

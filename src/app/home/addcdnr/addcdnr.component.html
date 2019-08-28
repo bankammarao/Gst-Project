@@ -1,0 +1,381 @@
+<div class="container mt-5">
+
+
+    <form [formGroup]="gstinvoiceform">
+        <!-- cdnr start -->
+        <div>
+            <div role="tabpanel" class="tab-pane fade show active">
+
+                <div class="tile">
+                    <h2 class="mb-5">CDNR</h2>
+                    <div class="row">
+
+                        <div class="col-md-3">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+
+                                <input type="text" class="form-control" id="firstname"
+                                    placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                                        GSTIN of the Tax Payer required
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">return period</label>
+
+                                <input type="number" class="form-control" id="lastname"
+                                    placeholder="Enter return period " formControlName="ret_period">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+
+                                        return period is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="gt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gt').errors.required">
+
+                                        Gross Turnover in Financial year is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turnover</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="cur_gt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+                                        Gross Turnover is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">ntty</label>
+
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter ntty"
+                                    formControlName="nttycdnr">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('nttycdnr').touched && gstinvoiceform.get('nttycdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('nttycdnr').errors.required">
+
+                                        Name of the ntty required
+
+                                    </span>
+
+                                    <span *ngIf="gstinvoiceform.get('nttycdnr').errors.pattern">
+
+                                        Only One Character is allowed
+
+                                    </span>
+
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">invoice number</label>
+
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter invoice number"
+                                    formControlName="inumcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('inumcdnr').touched && gstinvoiceform.get('inumcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('inumcdnr').errors.required">
+                                        invoice number is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Original Supplier Invoice Date</label>
+
+                                <input type="date" class="form-control" id="firstname"
+                                    placeholder="Enter Original Supplier Invoice Date" formControlName="idt">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('idt').touched && gstinvoiceform.get('idt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('idt').errors.required">
+                                        Original Supplier Invoice Date is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">nt_num</label>
+
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter nt_num"
+                                    formControlName="nt_numcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('nt_numcdnr').touched && gstinvoiceform.get('nt_numcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('nt_numcdnr').errors.required">
+                                        nt_num is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">nt_dt</label>
+
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter nt_dt"
+                                    formControlName="nt_dtcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('nt_dtcdnr').touched && gstinvoiceform.get('nt_dtcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('nt_dtcdnr').errors.required">
+                                        nt_dt is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">p_gst</label>
+
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter p_gst"
+                                    formControlName="p_gstcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('p_gstcdnr').touched && gstinvoiceform.get('p_gstcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('p_gstcdnr').errors.required">
+
+                                        Name of the p_gst required
+
+                                    </span>
+
+                                    <span *ngIf="gstinvoiceform.get('p_gstcdnr').errors.pattern">
+
+                                        Only One Character is allowed
+
+                                    </span>
+
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">value</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="valcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('valcdnr').touched && gstinvoiceform.get('valcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('valcdnr').errors.required">
+                                        Value is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <h2>Item Details</h2>
+                    <div class="row">
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Serial no</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter Serial Number" formControlName="numcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('numcdnr').touched && gstinvoiceform.get('numcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('numcdnr').errors.required">
+                                        serial no is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Rate of Invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="rtcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('rtcdnr').touched && gstinvoiceform.get('rtcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('rtcdnr').errors.required">
+                                        Rate of Invoice is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Taxable value </label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="txvalcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('txvalcdnr').touched && gstinvoiceform.get('txvalcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('txvalcdnr').errors.required">
+                                        Taxable value is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="iamtcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('iamtcdnr').touched && gstinvoiceform.get('iamtcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('iamtcdnr').errors.required">
+                                        IGST value is required </span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+
+                                <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                    formControlName="csamtcdnr">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('csamtcdnr').touched && gstinvoiceform.get('csamtcdnr').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('csamtcdnr').errors.required">
+                                        Cess value is required </span>
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-success"
+                        (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+                    <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                    <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!--  cdnr end -->
+</div>

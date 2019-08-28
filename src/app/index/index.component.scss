@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+.login{
+    background-color: gold;
+    text-emphasis-color: white;
+    position: relative;
+    top: 58px;
+}
+.custom-sign-btn {
+    border-radius: 16px!important;
+    padding: .25rem .5rem!important;
+    font-size: .875rem!important;
+    line-height: 1.5!important;
+    background-color: #fff;
+    color: #b00404;
+   
+}
+.custom-reg-btn {
+    position: relative;
+    top: -48px;
+    left: -119px;
+}
+.modal-close {
+
+    background-color: #fff!important;
+    border-radius: 15px;
+    padding: 15px!important;
+    color: #506d85;
+    opacity: unset;
+    border: 0!important;
+    position: relative;
+    cursor: pointer !important;
+    left: 5em;
+}
+
+.cursor1
+{
+    cursor: pointer !important;
+}
+
+.modal-backdrop.fade {
+    opacity: 0.5;
+  }
+
+#loginModal
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.41); /* Black w/ opacity */
+}
+
+#reigsterModal
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.41); /* Black w/ opacity */
+}
+
+
+
+.modal-close1
+{
+    background-color: #fff !important;
+    border-radius: 15px;
+    padding: 15px !important;
+    color: #506d85;
+    border: 0 !important;
+    position: fixed;
+    top:20px;
+    right:40px;
+    cursor: pointer !important;
+    z-index:99999;
+}
+
+.buttonlink
+{
+    color:#157ac1 !important;
+}
+
+.cursor1
+{
+    font-size:20px;
+}
+
+ .Register-Now {
+    font-family: Muli!important;
+    font-size: 32px!important;
+    font-weight: 700!important;
+    font-style: normal!important;
+    font-stretch: normal!important;
+    line-height: normal!important;
+    letter-spacing: normal!important;
+    color: #292c30!important;
+ }
+ .modal-sign-in-h6 {
+    font-family: Muli;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292c30;
+}
+.btn-modal-register, .btn-modal-sign-in {
+    border-radius: 32px;
+    background-color: #ff9429;
+    color: #fff;
+    padding: .375rem 2rem;
+}
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+.modal-popup-already {
+    font-family: Muli;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #506d85;
+}
+.modal-popup-sign-in {
+    font-family: Muli;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #00b9f5;
+    display: block;
+}
+
+#sign1,#sign
+{
+    display:none;
+}
+.waits
+{
+    color:red;
+}
+.wait i
+{
+    color:red;
+}
+.img-fluid {
+    margin-left: -31px;
+    margin-top: -16px
+
+}
+h1, .h1 {
+    font-size: 2.1875rem;
+    position: relative;
+    top: 21px;
+    left: 32px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #009688 !important;
+    color: white;
+    text-align: center;
+  }
+  .img-fluid {
+    margin-left: -27px;
+    margin-top: -11px;
+}
+
+.img-fluid mt-5 {
+    margin-left: -27px;
+    height: 50%;
+  
+}
+
+marquee {
+    position: relative;
+    top: 2px;
+    color: red;
+    background-color: navajowhite;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.Imgheight {
+    height: 271px;
+}
+.a1{
+    border: 1px solid green;
+    padding: 10px 20px;
+    background-color: #3c6478;
+    text-decoration-color: #ff9429;
+}
+.a2{
+    border: 1px solid green;
+    padding: 10px 20px;
+    background-color: #43abc9;
+    text-decoration-color: #ff9429;
+}
+.a3{
+    border: 1px solid gray;
+    padding: 10px 20px;
+    background-color: #b5c689;
+    text-decoration-color: #ff9429;
+}
+.img-fluid[_ngcontent-c1] {
+    margin-left: -32px;
+    margin-top: -16px;
+}
+.modal-lg {
+    max-width: 700px;
+    margin-top: -9px;
+}

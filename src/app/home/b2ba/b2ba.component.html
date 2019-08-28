@@ -1,0 +1,131 @@
+<div class="app-title mt-4" style="margin-left: -100px;
+margin-right: 10px;">
+
+  <div>
+
+    <h1><i class="fa fa-th-list"></i> B2BA-Invoice</h1>
+
+  </div>
+
+  <ul class="app-breadcrumb breadcrumb">
+
+  </ul>
+
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group" style="margin-left: -100px;
+      margin-right: 155px;">
+      <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <button type="button" style="margin-bottom:8px" class="btn btn-info float-right" (click)="addb2ba()">Add
+      Invoice</button>
+  </div>
+</div>
+<div class="tile" style="margin-left: -97px;">
+
+
+  <table class="table">
+
+    <thead>
+
+      <tr style="font-size:15px">
+
+
+        <th>Counter party GSTIN</th>
+
+        <th>invoice number</th>
+
+        <!-- <th>Check sum value</th> -->
+
+        <th>Original Supplier Invoice Number</th>
+
+        <th>Original Supplier Invoice Date</th>
+
+        <th>Supplier Invoice Number</th>
+
+        <th>Supplier Invoice Value</th>
+
+        <th>Place of Supply</th>
+
+        <!-- <th>Reverse Charge</th> -->
+
+        <th>EcomOperator</th>
+
+        <!-- <th>Invoice type</th> -->
+
+        <!-- <th>Differential percentage</th> -->
+
+        <th>rate</th>
+
+        <th>Taxable val of Goods</th>
+
+        <th>IGST Amount as per invoice</th>
+
+        <th>CGST Amount as per invoice</th>
+
+        <th>SGST Amount as per invoice</th>
+
+        <th>cess Amount as per invoice</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let gst of b2baList| filter:term | paginate: { itemsPerPage: 5, currentPage:b2bpage }; let i=index">
+
+        <td>{{gst.ctin}}</td>
+
+        <td>{{gst.inv[0].inum}}</td>
+
+        <!-- <td>{{gst.inv[0].chksum}}</td> -->
+
+        <td>{{gst.inv[0].oinum}}</td>
+
+        <td>{{gst.inv[0].oidt}}</td>
+
+        <td>{{gst.inv[0].inum}}</td>
+
+        <td>{{gst.inv[0].val}}</td>
+
+        <td>{{gst.inv[0].pos}}</td>
+
+        <!-- <td>{{gst.inv[0].rchrg}}</td> -->
+
+        <td>{{gst.inv[0].etin}}</td>
+
+        <!-- <td>{{gst.inv[0].inv_typ}}</td> -->
+
+        <!-- <td>{{gst.inv[0].diff_percent}}</td> -->
+
+        <td>{{gst.inv[0].itms[0].itm_det.rt}}</td>
+
+        <td>{{gst.inv[0].itms[0].itm_det.txval}}</td>
+
+        <td>{{gst.inv[0].itms[0].itm_det.iamt}}</td>
+
+        <td>{{gst.inv[0].itms[0].itm_det.camt}}</td>
+
+        <td>{{gst.inv[0].itms[0].itm_det.samt}}</td>
+
+        <td>{{gst.inv[0].itms[0].itm_det.csamt}}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success" (click)="back()">Back</button>
+  </div>
+  <div class="col-md-6">
+    <pagination-controls class="pull-right" (pageChange)="b2bpage = $event"></pagination-controls>
+  </div>
+</div>

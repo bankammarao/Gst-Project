@@ -1,0 +1,186 @@
+<div class="container mt-5">
+
+ 
+  <form [formGroup]="gstinvoiceform">
+  
+  <!-- doc_issue starts -->
+  <div>
+    <div role="tabpanel" class="tab-pane fade show active">
+
+        <div class="tile">
+            <h2 class="mb-5">Doc</h2>
+            <div class="row">
+
+              <div class="col-md-3">
+
+                  <div class="form-group form-group-sm">
+
+                      <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+
+                      <input type="text" class="form-control" id="firstname"
+                          placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                      <span style="color:red"
+                          *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                          <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                              GSTIN of the Tax Payer required
+
+                          </span>
+
+                      </span>
+
+
+                  </div>
+
+              </div>
+
+              <div class="col-md-3">
+
+                  <div class="form-group">
+
+                      <label for="lastname" class="control-label">return period</label>
+
+                      <input type="number" class="form-control" id="lastname"
+                          placeholder="Enter return period " formControlName="ret_period">
+
+                  </div>
+
+              </div>
+
+              <div class="col-md-3">
+
+                  <div class="form-group">
+
+                      <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+
+                      <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                          formControlName="gt">
+
+                  </div>
+
+              </div>
+
+
+              <div class="col-md-3">
+
+                  <div class="form-group">
+
+                      <label for="lastname" class="control-label">Gross Turnover</label>
+
+                      <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                          formControlName="cur_gt">
+
+                  </div>
+
+              </div>
+          </div>
+          <br>
+            <div class="row">
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">doc_num</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter doc_num"
+                            formControlName="doc_num">
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">numdoc</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter numdoc"
+                            formControlName="numdoc">
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">from</label>
+
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter from"
+                            formControlName="from">
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">to</label>
+
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter to"
+                            formControlName="to">
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">totnum</label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter totnum"
+                            formControlName="totnum">
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">cancel</label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter cancel"
+                            formControlName="cancel">
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">net_issue</label>
+
+                        <input type="number" class="form-control" id="lastname"
+                            placeholder="Enter net_issue" formControlName="net_issue">
+
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+
+
+
+            <button type="button" class="btn btn-success"
+                (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+            <button type="button" class="btn btn-danger ml-4"
+                (click)="gstinvoiceform.reset()">Cancel</button>
+            <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+        </div>
+       
+    </div>
+</div>
+</form>
+</div>
+<!-- doc_issue ends -->

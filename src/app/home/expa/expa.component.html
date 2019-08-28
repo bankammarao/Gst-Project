@@ -1,0 +1,90 @@
+<div class="app-title mt-4" style="margin-left: -100px;
+margin-right: 10px;">
+  <div>
+    <h1><i class="fa fa-th-list"></i> EXPA-Invoice</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group" style="margin-left: -100px;
+    margin-right: 155px;">
+      <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <button type="button" style="margin-bottom:8px" class="btn btn-info float-right"  (click)="addexpa()">Add Invoice</button>
+  </div>
+</div>
+<div class="tile" style="margin-left: -97px;">
+
+  <table class="table">
+    <thead>
+      <tr style="font-size:15px">
+
+        <th>Export Type : With / Without payment of GST</th>
+
+        <th>chsum</th>
+
+        <th>Original Supplier Invoice Number</th>
+        <th>Original Supplier Invoice Date</th>
+        <th>Supplier Invoice Number</th>
+        <th>Supplier Invoice Date</th>
+
+
+        <th>Supplier Invoice Value</th>
+        <th>Shipping Bill Port Code</th>
+        <th>Shipping Bill No. or Bill of Export No</th>
+        <th>Shipping Bill Date. or Bill of Export Date</th>
+        <th>Differential percentage</th>
+        <th>Taxable value of Goods or Service as per invoice</th>
+        <th>Rate as per invoice</th>
+        <th>IGST Amount as per invoice</th>
+        <th>Cess amount as per invoice</th>
+
+      </tr>
+
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let d of ExpaList| filter:term | paginate: { itemsPerPage: 5, currentPage:b2bpage }; let i=index">
+
+        <td>{{d.exp_typ}}</td>
+        <td>{{d.inv[0].chksum}}</td>
+        <td>{{d.inv[0].oinum}}</td>
+        <td>{{d.inv[0].oidt}}</td>
+        <td>{{d.inv[0].inum}}</td>
+        <td>{{d.inv[0].idt}}</td>
+
+        <td>{{d.inv[0].val}}</td>
+        <td>{{d.inv[0].sbpcode}}</td>
+        <td>{{d.inv[0].sbnum}}</td>
+        <td>{{d.inv[0].sbdt}}</td>
+
+        <td>{{d.inv[0].diff_percent}}</td>
+
+
+
+        <td>{{d.inv[0].itms[0].txval}}</td>
+        <td>{{d.inv[0].itms[0].rt}}</td>
+
+        <td>{{d.inv[0].itms[0].iamt}}</td>
+
+        <td>{{d.inv[0].itms[0].csamt}}</td>
+
+
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success" (click)="back()">Back</button>
+  </div>
+  <div class="col-md-6">
+  <pagination-controls class="pull-right" (pageChange)="b2bpage = $event"></pagination-controls> 
+  </div>
+  </div>

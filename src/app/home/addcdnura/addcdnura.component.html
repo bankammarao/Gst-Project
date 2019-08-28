@@ -1,0 +1,343 @@
+<div class="container mt-5">
+
+
+        <form [formGroup]="gstinvoiceform">
+   <!-- cdnura start -->
+    <div >
+        <div role="tabpanel" class="tab-pane fade show active">
+
+            <div class="tile">
+                <h2 class="mb-5">CDNURA</h2>
+                <div class="row">
+
+                        <div class="col-md-3">
+    
+                            <div class="form-group form-group-sm">
+    
+                                <label for="firstname" class="control-label">GSTIN of the Tax Payer</label>
+    
+                                <input type="text" class="form-control" id="firstname"
+                                    placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+    
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+    
+                                    <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+    
+                                        GSTIN of the Tax Payer required
+    
+                                    </span>
+    
+                                </span>
+    
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-md-3">
+    
+                            <div class="form-group">
+    
+                                <label for="lastname" class="control-label">return period</label>
+    
+                                <input type="number" class="form-control" id="lastname"
+                                    placeholder="Enter return period " formControlName="ret_period">
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-md-3">
+    
+                            <div class="form-group">
+    
+                                <label for="lastname" class="control-label">Gross Turnover in Financial year </label>
+    
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="gt">
+    
+                            </div>
+    
+                        </div>
+    
+    
+                        <div class="col-md-3">
+    
+                            <div class="form-group">
+    
+                                <label for="lastname" class="control-label">Gross Turnover</label>
+    
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="cur_gt">
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                    <br>
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">ont_num</label>
+
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter ont_num"
+                                formControlName="ont_num">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+
+                            <label for="lastname" class="control-label">ont_dt</label>
+
+                            <input type="date" class="form-control" id="lastname" placeholder="Enter ont_dt"
+                                formControlName="ont_dt">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">nt_numcdnura</label>
+
+                            <input type="text" class="form-control" id="firstname"
+                                placeholder="Enter nt_numcdnura" formControlName="nt_numcdnura">
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">nt_dtcdnura</label>
+
+                            <input type="date" class="form-control" id="firstname"
+                                placeholder="Enter nt_dtcdnura" formControlName="nt_dtcdnura">
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">nttycdnura</label>
+
+                            <input type="text" class="form-control" id="firstname"
+                                placeholder="Enter nttycdnura" formControlName="nttycdnura">
+                            <span style="color:red"
+                                *ngIf="gstinvoiceform.get('nttycdnura').touched && gstinvoiceform.get('nttycdnura').invalid">
+
+                                <span *ngIf="gstinvoiceform.get('nttycdnura').errors.required">
+
+                                    Name of the ntty required
+
+                                </span>
+
+                                <span *ngIf="gstinvoiceform.get('nttycdnura').errors.pattern">
+
+                                    Only One Character is allowed
+
+                                </span>
+
+
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">typcdnura</label>
+
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter typcdnura"
+                                formControlName="typcdnura">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+
+                            <label for="lastname" class="control-label">p_gst</label>
+
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter p_gst"
+                                formControlName="p_gst">
+                            <span style="color:red"
+                                *ngIf="gstinvoiceform.get('p_gst').touched && gstinvoiceform.get('p_gst').invalid">
+
+                                <span *ngIf="gstinvoiceform.get('p_gst').errors.required">
+
+                                    Name of the p_gst required
+
+                                </span>
+
+                                <span *ngIf="gstinvoiceform.get('p_gst').errors.pattern">
+
+                                    Only One Character is allowed
+
+                                </span>
+
+
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+
+                            <label for="lastname" class="control-label">inumcdnura</label>
+
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter inumcdnura"
+                                formControlName="inumcdnura">
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+
+                            <label for="lastname" class="control-label">valcdnura</label>
+
+                            <input type="number" class="form-control" id="lastname"
+                                placeholder="Enter valcdnura" formControlName="valcdnura">
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+
+                            <label for="lastname" class="control-label">idtcdnura</label>
+
+                            <input type="date" class="form-control" id="lastname" placeholder="Enter idtcdnura"
+                                formControlName="idtcdnura">
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+
+                            <label for="lastname" class="control-label">diff_percentcdnura</label>
+
+                            <input type="number" class="form-control" id="lastname"
+                                placeholder="Enter diff_percentcdnura" formControlName="diff_percentcdnura">
+
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+
+
+                <h2>Item Details</h2>
+                <div class="row">
+
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">Serial no</label>
+
+                            <input type="number" class="form-control" id="firstname"
+                                placeholder="Enter Serial Number" formControlName="numcdnura">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">Rate of Invoice</label>
+
+                            <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                formControlName="rtcdnura">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">Taxable value </label>
+
+                            <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                formControlName="txvalcdnura">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+
+                            <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                formControlName="iamtcdnura">
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="col-md-4">
+
+                        <div class="form-group form-group-sm">
+
+                            <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+
+                            <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                                formControlName="csamtcdnura">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-success"
+                    (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+                <button type="button" class="btn btn-danger ml-4"
+                    (click)="gstinvoiceform.reset()">Cancel</button>
+                <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+            </div>
+            
+        </div>
+    </div>
+    </form>
+    <!--  cdnra end -->
+  </div>

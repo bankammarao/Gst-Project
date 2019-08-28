@@ -1,0 +1,232 @@
+<!-- <div class="row mt-5">
+        <div class="col-md-4">
+            
+        <div class="card" (click)="onSelect(item)" *ngFor="let item of departments">
+          
+            <div class="card-body text-center p-4  bg-color " >
+                <a (click)="gstr1()"><h3>{{item.name}}</h3></a>
+            
+            </div> 
+     
+          </div>
+       
+    
+        </div>
+        
+        
+    </div> -->
+
+<div class="row mt-5" style="margin-left: -189px;">
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getb2b()">
+                    <h4><b>B2B-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getb2ba()">
+                    <h4><b>B2BA-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getb2cl()">
+                    <h4><b>B2CL-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getb2cla()">
+                    <h4><b>B2CLA-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+   
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getcdnr()">
+                    <h4><b>CDNR-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getcdnra()">
+                    <h4><b>CDNRA-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getb2cs()">
+                    <h4><b>B2CS-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getb2csa()">
+                    <h4><b>B2CSA-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getexp()">
+                    <h4><b>EXP-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getexpa()">
+                    <h4><b>EXPA-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="gethsn()">
+                    <h4><b>HSN-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="getnil()">
+                    <h4><b>NIL-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="gettxpd()">
+                    <h4><b>TXPD-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center p-4 bg-color">
+                <a (click)="gettxpda()">
+                    <h4><b>TXPDA-Add Invoice</b></h4>
+                </a>
+            </div>
+            <div class="card-footer p-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center p-4 bg-color">
+                    <a (click)="getdocissue()">
+                        <h4><b>DOC_ISSUE-Add Invoice</b></h4>
+                    </a>
+                </div>
+                <div class="card-footer p-4">
+    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center p-4 bg-color">
+                        <a (click)="getcdnur()">
+                            <h4><b>CDNUR-Add Invoice</b></h4>
+                        </a>
+                    </div>
+                    <div class="card-footer p-4">
+        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center p-4 bg-color">
+                            <a (click)="getcdnura()">
+                                <h4><b>CDNURA-Add Invoice</b></h4>
+                            </a>
+                        </div>
+                        <div class="card-footer p-4">
+            
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-md-4 button-position">
+                <button class="btn btn-success" (click)="back()">Back</button>
+            </div>
+  
+</div>
